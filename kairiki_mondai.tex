@@ -160,8 +160,51 @@ Simulated result is following.
 
 \subsubsection*{(b) Effect of small distortion from sphere} 
 
-To be accurate, the earth is not a perfect shpere. So, the area to be integrated in eq(\ref{eq:calcurated_potential}) should be corrected. But, the volme of the area to be added or removed is much smaller than the earth diameter. For example, the deepest point of the sea, the Mariana Trench is 10000m depth. Another example, highest mountain Evelest is 8800m height. 
-We consider that the 
+\subsection{}
 
+\subsection{}
+Harmonic oscillator potential :
+\begin{equation}
+	V(x) = \frac{1}{2}Kx^2
+\end{equation}
 
+Eq(1.42) : 
+\begin{equation}\label{eq:1.42}
+	t-t_0 = \pm \int_{x_0}^x \frac{1}{\sqrt{(2/m)(E-V(x))}}dx
+\end{equation}
+
+Mathmatical technique : 
+
+\begin{eqnarray}
+	\frac{d}{dx}(\sin{(\arcsin{x})}) = \frac{d}{dx}x = 1 \nonumber \\
+	\cos{(\arcsin{x})}\frac{d}{dx}(\arcsin{x}) = \sqrt{1-\sin^2{(\arcsin{x})}}\frac{d}{dx}(\arcsin{x}) \nonumber \\
+	= \sqrt{1 - x^2}\frac{d}{dx}(\arcsin{x}) \nonumber \\
+	\Rightarrow \frac{d}{dx}(\arcsin{x}) = \frac{1}{\sqrt{1-x^2}}
+\end{eqnarray}
+
+Rightside of eq(\ref{eq:1.42}) becomes,
+
+\begin{eqnarray}
+	\int_{x_0}^x \frac{1}{\sqrt{(2E/m)}}\frac{1}{\sqrt{1 - (K/2E)x^2}}dx \nonumber \\
+	= \frac{1}{\sqrt{2E/m}} \frac{1}{\sqrt{K/2E}} \int_{x_0\sqrt{K/2E}}^{x\sqrt{K/2E}}\frac{1}{\sqrt{1-x^2}}dx \nonumber \\
+	= \frac{1}{\sqrt{K/m}} \left[\arcsin{(x\sqrt{K/2E})} - \arcsin{(x_0\sqrt{K/2E})}\right] \nonumber
+\end{eqnarray}
+
+Select $t_0 = 0$, 
+\begin{eqnarray}
+	\omega t = \arcsin{(x\sqrt{K/2E})} - \arcsin{(x_0\sqrt{K/2E})} \nonumber \\
+	\Rightarrow x = \sqrt{\frac{2E}{K}} \sin{\left(\omega t + \arcsin{(x_0\sqrt{K/2E})}\right)}
+\end{eqnarray}
+
+To set to same form as eq(1.44), 
+\begin{eqnarray}
+	x = \sqrt{\frac{2E}{K}}\sin\left(\omega t + \frac{\pi}{2} + \arcsin(x_0\sqrt{K/2E}) - \frac{\pi}{2}\right) \nonumber \\
+	= \sqrt{\frac{2E}{K}}\sin\left(\omega t + \frac{\pi}{2} + \arccos(x_0\sqrt{K/2E})\right) \nonumber \\
+	= \sqrt{\frac{2E}{K}}\cos(\omega t + \gamma), ~~~~~~~~ \cos\gamma = x_0\sqrt{K/2E} \nonumber \\
+	p = m\dot{x} = -m\omega \sqrt{\frac{2E}{K}}\sin(\omega t + \gamma)
+\end{eqnarray}
+
+All phase space streamline of this system create concentric ellipses. For example, consider a group of initial values, which creates a ellipse sector angle $\theta$. This group creates a space $\Gamma_0$ in phase space. 
+
+Area of $\Gamma_0$ is $2m\omega E\theta /K$. After $t$[sec], any point in the group rotates $\omega t$, along each streamline. Thus, $\theta$ doesn't change($\Gamma_t = \Gamma_0$) : Liuville's theorem.
 \end{document}
