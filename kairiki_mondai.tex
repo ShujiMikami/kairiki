@@ -207,4 +207,51 @@ To set to same form as eq(1.44),
 All phase space streamline of this system create concentric ellipses. For example, consider a group of initial values, which creates a ellipse sector angle $\theta$. This group creates a space $\Gamma_0$ in phase space. 
 
 Area of $\Gamma_0$ is $2m\omega E\theta /K$. After $t$[sec], any point in the group rotates $\omega t$, along each streamline. Thus, $\theta$ doesn't change($\Gamma_t = \Gamma_0$) : Liuville's theorem.
+
+\subsection{}
+Electric potential : 
+\[
+	V(x) = -eV\left(1 - \frac{|x|}{a}\right)
+\]
+
+For this potential, $x=0$ is a singular point. 
+
+Force : 
+\begin{equation}\label{eq:equation_of_motion}
+	\dot{p}^2 = F(x) = -eV\frac{{\rm sign}(x)}{a}, ~~~~ x\neq 0
+\end{equation}
+
+Conservation of energy : 
+\begin{equation}\label{eq:conserv_energy}
+	\frac{1}{2m}p^2 -eV\left(1-\frac{|x|}{a}\right) = E
+\end{equation} 
+
+At initial, $p(0) = 0$, $x = b$, then, 
+\[
+	E = -eV\left(1-\frac{b}{a}\right)
+\]
+
+Eq(\ref{eq:conserv_energy}) becomes.
+\begin{eqnarray}\label{eq:phase_space_equation}
+	\frac{1}{2m}p^2 + eV\frac{|x|}{a} = eV\frac{b}{a} \nonumber \\
+	\Leftrightarrow x = \pm \left(b - \frac{1}{2meV}p^2 \right)
+\end{eqnarray}
+
+\begin{figure}[htbp]
+	\includegraphics[width=10cm]{phase_space_plot.png}
+\end{figure}
+
+Eq(\ref{eq:phase_space_equation}) has two degrees of freedom of the sign($\pm$ and $p^2$). So, from the view point of mathmatics, 4 solutions are allowed. 
+We can choose one soluton by the initial condition : 
+\begin{equation}\label{eq:initial_condition}
+	x(0) = b, p(0) = 0, t=0
+\end{equation}
+and by the equation of motion : eq(\ref{eq:equation_of_motion}).
+
+At $t=0$ the initial condition eq(\ref{eq:initial_condition}) shows, the streamline must be started along the orange solid line or green solid line. Also, eq(\ref{eq:equation_of_motion}) shows, $p$ must be reduced. Thus, the orange solid line is selected for the stream line, and the direction is right to left. This is effective until $x=+0$. 
+At $x=-0$, allowed line is the blue solid line and the orange dot line, because streamline must be continuous. Eq(\ref{eq:equation_of_motion}) shows $p$ must be increased. So, the blue solid line is selected, and the direction is still right to left. After $x = -b$, the red solid line is selected because the streamline must be continuous. 
+By same logic, the green solid line is selected. 
+Thus, the streamline is the solid line loop, and the direction of is right rotation.
+
+
 \end{document}
