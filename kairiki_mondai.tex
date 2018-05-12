@@ -162,7 +162,7 @@ Simulated result is following.
 
 \subsection{}
 
-\subsection{}
+\subsection{}\label{subsec:1.5}
 Harmonic oscillator potential :
 \begin{equation}
 	V(x) = \frac{1}{2}Kx^2
@@ -251,7 +251,66 @@ and by the equation of motion : eq(\ref{eq:equation_of_motion}).
 At $t=0$ the initial condition eq(\ref{eq:initial_condition}) shows, the streamline must be started along the orange solid line or green solid line. Also, eq(\ref{eq:equation_of_motion}) shows, $p$ must be reduced. Thus, the orange solid line is selected for the stream line, and the direction is right to left. This is effective until $x=+0$. 
 At $x=-0$, allowed line is the blue solid line and the orange dot line, because streamline must be continuous. Eq(\ref{eq:equation_of_motion}) shows $p$ must be increased. So, the blue solid line is selected, and the direction is still right to left. After $x = -b$, the red solid line is selected because the streamline must be continuous. 
 By same logic, the green solid line is selected. 
-Thus, the streamline is the solid line loop, and the direction of is right rotation.
+Thus, the streamline is the solid line loop, and the direction is right rotation.
 
+\subsection{}
+2-dimentional harmonic oscillator : 
+\begin{eqnarray}
+	\mbold{F} = -\left(\begin{array}{c} ax \\ by \end{array} \right) \nonumber
+\end{eqnarray}
 
+Equation of motion : 
+\begin{eqnarray}
+	m\left( \begin{array}{c} \ddot{x} \\ \ddot{y} \end{array} \right) =  -\left(\begin{array}{c} ax \\ by \end{array} \right) \nonumber
+\end{eqnarray}
+
+Analogy with sec(\ref{subsec:1.5}), 
+\begin{eqnarray}
+	x = \sqrt{\frac{2E_x}{a}}\cos(\omega_x t + \gamma_x), ~~~~ \cos\gamma_x = x_0\sqrt{a/2E_x},~~~ E_x = \frac{1}{2m}p_{x0}^2 + \frac{1}{2}ax_0^2 \nonumber \\
+	y = \sqrt{\frac{2E_y}{b}}\cos(\omega_y t + \gamma_y), ~~~~ \cos\gamma_y = y_0\sqrt{b/2E_y},~~~ E_y = \frac{1}{2m}p_{y0}^2 + \frac{1}{2}ay_0^2 \nonumber 
+\end{eqnarray}
+where, $\omega_x = \sqrt{a/m}$, $\omega_y = \sqrt{b/m}$.
+
+\subsubsection*{(i) $a = b$}
+In this case, $\omega_x = \omega_y = \omega$, so, the differences between $x$ and $y$ are only amplitude and phase.
+$A \equiv \sqrt{\frac{E_x}{a}}$, $B \equiv \sqrt{\frac{E_y}{b}}$, using additional theorem, 
+\begin{equation}
+	\frac{y}{B} = \frac{x}{A}\cos(\gamma_y-\gamma_x) - \sin(\gamma_y - \gamma_x)\sqrt{1-\frac{x^2}{A^2}}
+\end{equation}
+Delete square root, 
+\begin{eqnarray}
+	\frac{y^2}{B^2} +\frac{x^2}{A^2}\cos^2(\gamma_y - \gamma_x) - 2\frac{xy}{AB}\cos(\gamma_y - \gamma_x) = \sin^2(\gamma_y - \gamma_x)\left(1-\frac{x^2}{A^2}\right) \nonumber \\
+	\frac{x^2}{A^2} + \frac{y^2}{B^2} -2\frac{xy}{AB}\cos(\gamma_y - \gamma_x) = \sin^2(\gamma_y - \gamma_x) \nonumber
+\end{eqnarray}
+
+If $\gamma_y = \gamma_x$, it means $x_0 = y_0$ and $E_x = E_y$, 
+\[
+	\frac{x}{A} - \frac{y}{B} = 0
+\]
+Thus, this is a straight line.
+If $\gamma_y \neq \gamma_x$, 
+\[
+	\frac{1}{A^2}\frac{1}{B^2} - \left( \frac{\cos(\gamma_y - \gamma_x)}{AB} \right)^2 >0
+\]
+then, this is a ellipse with slope.
+
+\begin{figure}[htbp]
+	\includegraphics[width=10cm]{two_dim_harmonic_streamline.png}
+\end{figure}
+
+\subsubsection*{(ii) $a = 4b$}
+$\omega_x = 2\omega_y$. In this case, streamline draws a bit complicated line. 
+\begin{figure}[htbp]
+	\includegraphics[width=10cm]{two_dim_harmonic_streamline_div4.png}
+\end{figure}
+If $\gamma_y=\gamma_x$, the line is parabola, because, $\cos2\omega t = 2\cos^2\omega t - 1$. 
+The stream line is periodic. The period of $x$ is $T_x = 2\pi/\omega_x$, the otherhand, the period of $y$ is $T_y = 2\pi/\omega_y = T_x/2$. So, $2T_x$ is the period of whole system. 
+
+\subsubsection*{(iii) General case}
+If $\omega_x / \omega_y$ is a fraction($\sqrt{a/b}$ is a fraction), with analgy with (ii), the streamline is periodic and the period is LCM of $\omega_x$ and $\omega_y$. 
+But if $\omega_x / \omega_y$ is a irrational number, the streamline is never periodic. Thus, the streamline never passes same point. 
+
+\begin{figure}[htbp]
+	\includegraphics[width=10cm]{two_dim_harmonic_streamline_divsqrt2.png}
+\end{figure}
 \end{document}
